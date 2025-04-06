@@ -1,8 +1,33 @@
+# # Specify the minimum CMake version
+# cmake_minimum_required(VERSION 3.10)
+#
+# # Define the project name and its version
+# project(SFML_Project VERSION 1.0)
+#
+# # Set the C++ standard
+# set(CMAKE_CXX_STANDARD 17)
+# set(CMAKE_CXX_STANDARD_REQUIRED True)
+#
+# # Add SFML as a subdirectory
+# # Assumes SFML is located in external/SFML relative to this CMakeLists.txt
+# add_subdirectory(external/SFML)
+#
+# # Add the executable
+# # Assumes your source files are in the src/ directory
+# add_executable(${PROJECT_NAME} src/main.cpp)
+#
+# # Link SFML libraries to the project
+# target_link_libraries(${PROJECT_NAME} PRIVATE sfml-system sfml-window sfml-graphics)
+#
+# # Optionally include SFML headers
+# target_include_directories(${PROJECT_NAME} PRIVATE external/SFML/include)
+#
+
 cmake_minimum_required(VERSION 3.28)
 project(CMakeSFMLProject LANGUAGES CXX)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
+# option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 
 include(FetchContent)
 FetchContent_Declare(SFML
